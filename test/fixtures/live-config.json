@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "input": {
+    "ports": [
+      15565
+    ],
+    "delimiter": "|",
+    "tag": "SR",
+    "columns": [
+      "location",
+      "bib",
+      "time",
+      "contest",
+      "first",
+      "last",
+      "team",
+      "gender"
+    ]
+  },
+  "filter": {
+    "tagWindowSec": 25,
+    "holdSec": 0,
+    "startIgnoreSec": 60
+  },
+  "names": {
+    "pplPath": "C:\\Lynx\\Meet.ppl"
+  },
+  "lif": {
+    "enabled": false,
+    "inputDir": "",
+    "outputDir": "",
+    "fillPlaces": false
+  },
+  "panel": {
+    "port": 15590,
+    "allowLan": false
+  },
+  "races": [
+    {
+      "id": "r_4137246fdc",
+      "name": "Womens Race",
+      "eventNumber": "2",
+      "round": "1",
+      "heat": "1",
+      "distance": "6K",
+      "contests": [],
+      "inputPort": 5565,
+      "gun": "16:28:00.455",
+      "splits": [
+        {
+          "id": "s_0e2c6696a0",
+          "name": "800m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_15035c0410",
+          "name": "1500m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_07294c4579",
+          "name": "2400m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_f2af76f4c8",
+          "name": "3100m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_730f3c3cbd",
+          "name": "4200m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_e48539d833",
+          "name": "4400m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_bc179815d0",
+          "name": "5300m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        }
+      ],
+      "finishSources": [],
+      "active": true
+    },
+    {
+      "id": "r_d125f1e39f",
+      "name": "Mens Race",
+      "eventNumber": "1",
+      "round": "1",
+      "heat": "1",
+      "distance": "",
+      "contests": [],
+      "inputPort": 5565,
+      "gun": "",
+      "splits": [
+        {
+          "id": "s_7bc0d1c815",
+          "name": "800m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_262a4dceb1",
+          "name": "1500m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_987a167143",
+          "name": "2500m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_833727654e",
+          "name": "3500m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_dfca5a41c9",
+          "name": "4500m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_a92a0e1cb3",
+          "name": "5500m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_26f25fbeef",
+          "name": "6400m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        },
+        {
+          "id": "s_d8c3d8ac32",
+          "name": "7100m",
+          "sources": [],
+          "earliest": "",
+          "sending": true
+        }
+      ],
+      "finishSources": [],
+      "active": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "o_62e82ddd5d",
+      "name": "TrackScore",
+      "enabled": false,
+      "mode": "tcp-client",
+      "host": "127.0.0.1",
+      "port": 15555,
+      "script": "C:\\Lynx\\XCScore.lss",
+      "stage": "results",
+      "races": [],
+      "eventNumber": "race",
+      "precision": 3,
+      "mid": ""
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+; Split Relay start time script v1
+; Sends each race's event number, round, heat and start time of day (TOD) to Split Relay,
+; so Split Relay sets that race's gun from FinishLynx. One complete JSON object per line.
+; Needs FinishLynx 9.10 or newer: field \14\19 is the participant's start time (the same as in the .lif file).
+;
+; Setup (a scoreboard of its own, beside TrackScore's):
+;  1. Copy this file to C:\Lynx and restart FinishLynx.
+;  2. Scoreboard > Options for a new scoreboard: Serial Port = Network (Connect),
+;     IP Address = 127.0.0.1 (or the Split Relay PC's address), Port = 5570.
+;  3. Script = SplitRelay-Start.lss.
+;  4. Results = Auto, Paging ON, Size = 1, Time = 0 ("one at a time": FinishLynx then sends
+;     start times when a start is created, deleted or edited).
+;
+;      \11  Time
+;         \00  No variable
+;         \01  Formatted time
+;      \13  Results Header/Trailer
+;         \00  No variable
+;         \01  OFFICIAL/UNOFFICIAL string
+;         \02  Event name
+;         \04  Event number
+;         \05  Round number
+;         \06  Heat number
+;         \07  AUTO/MANUAL start type
+;         \09  ARMED/RUNNING status
+;      \14  Result
+;         \00  No variable
+;         \01  Place
+;         \03  Id (Bib)
+;         \19  Start time (time of day, as in the .lif file)
+;         \1a  Start time in Time Trial mode (only when there is a key match)
+
+;;TimeArmed
+\11\00{"c":"armed"}\0d\0a
+
+;;TimeGun
+\11\01{"c":"gun","t":"%s"}\0d\0a
+
+;;StartList
+\14\00{"c":"start","T":"L",
+\13\04"EN":"%s",
+\13\05"R":"%s",
+\13\06"H":"%s",
+\13\02"DN":"%s",
+\13\07"SA":"%s",
+\13\09"ST":"%s",
+\14\03"BIB":"%s",
+\14\19"TOD":"%s",
+\14\1a"TT":"%s"
+\14\00}\0d\0a
+
+;;Started
+\14\00{"c":"start","T":"T",
+\13\04"EN":"%s",
+\13\05"R":"%s",
+\13\06"H":"%s",
+\13\02"DN":"%s",
+\13\07"SA":"%s",
+\13\09"ST":"%s",
+\14\01"P":"%s",
+\14\03"BIB":"%s",
+\14\19"TOD":"%s",
+\14\1a"TT":"%s"
+\14\00}\0d\0a
+
+;;Results
+\14\00{"c":"start","T":"R",
+\13\04"EN":"%s",
+\13\05"R":"%s",
+\13\06"H":"%s",
+\13\02"DN":"%s",
+\13\07"SA":"%s",
+\13\09"ST":"%s",
+\14\01"P":"%s",
+\14\03"BIB":"%s",
+\14\19"TOD":"%s",
+\14\1a"TT":"%s"
+\14\00}\0d\0a

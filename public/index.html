@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e141b">
+  <title>Split Relay</title>
+  <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-row">
+      <a class="brand" href="#live" aria-label="Split Relay: Dashboard">
+        <img class="brand-logo" src="icons/logo.svg" alt="" width="26" height="26">
+        <span class="brand-name">SPLIT <b>RELAY</b></span>
+      </a>
+      <span class="topbar-sep" aria-hidden="true"></span>
+      <form id="runner-find" class="runner-find" role="search"><input id="rf-input" type="search" placeholder="Bib or name" autocomplete="off" spellcheck="false" aria-label="Find a runner: bib or name (B)" aria-keyshortcuts="b" aria-autocomplete="list" aria-controls="rf-list" aria-expanded="false"><button class="btn small icon-btn local" aria-label="Find"><span class="i i-search" aria-hidden="true"></span></button><div id="rf-list" class="rf-list" role="listbox" aria-label="Runners found" hidden></div></form>
+      <nav class="lights" id="lights" aria-label="Status (click a light to open its page)"></nav>
+      <span class="badge tone-info viewonly-chip" id="viewonly-chip" title="This page is open from another computer: it can watch, not change anything." hidden><span class="i i-eye" aria-hidden="true"></span>View only</span>
+      <button type="button" class="badge tone-info update-chip" id="update-chip" title="A newer version of Split Relay is on GitHub: see what is new, and install it" hidden><span class="i i-down" aria-hidden="true"></span><span id="update-chip-text">Update</span></button>
+      <span class="conn tone-muted" id="conn" role="status"><span class="dot" aria-hidden="true"></span><span id="conn-text">Connecting…</span></span>
+    </div>
+
+    <div id="banner-conn" class="banner tone-bad" role="alert" hidden>
+      <span class="i i-alert" aria-hidden="true"></span>
+      <div class="banner-text">
+        <strong>Lost connection to Split Relay. Retrying…</strong>
+        <span>Is the Split Relay window still open? If not, start it again (start.bat). RR12 keeps its reads meanwhile.</span>
+        <span id="banner-conn-when"></span>
+      </div>
+      <button type="button" class="btn small" id="banner-retry">Retry now</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <nav class="rail" id="rail" aria-label="Pages">
+      <a class="nav-item" href="#live" data-tab="live"><span class="i i-dashboard" aria-hidden="true"></span><span class="nav-label">Dashboard</span><span class="nav-badge" data-badge="live" hidden></span></a>
+      <a class="nav-item" href="#review" data-tab="review"><span class="i i-review" aria-hidden="true"></span><span class="nav-label">Review</span><span class="nav-badge" data-badge="review" hidden></span></a>
+      <a class="nav-item" href="#races" data-tab="races"><span class="i i-races" aria-hidden="true"></span><span class="nav-label">Races</span><span class="nav-badge" data-badge="races" hidden></span></a>
+      <a class="nav-item" href="#outputs" data-tab="outputs"><span class="i i-outputs" aria-hidden="true"></span><span class="nav-label">Outputs</span><span class="nav-badge" data-badge="outputs" hidden></span></a>
+      <a class="nav-item" href="#inputs" data-tab="inputs"><span class="i i-inputs" aria-hidden="true"></span><span class="nav-label">Inputs</span><span class="nav-badge" data-badge="inputs" hidden></span></a>
+      <a class="nav-item" href="#settings" data-tab="settings"><span class="i i-settings" aria-hidden="true"></span><span class="nav-label">Settings</span><span class="nav-badge" data-badge="settings" hidden></span></a>
+      <a class="nav-item" href="#help" data-tab="help"><span class="i i-help" aria-hidden="true"></span><span class="nav-label">Help</span></a>
+      <p class="rail-foot" id="rail-foot">Split Relay</p>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <div id="boot" class="boot card">
+        <h1>Split Relay</h1>
+        <p>Connecting to Split Relay…</p>
+        <p class="help">If this stays, check that Split Relay is running (start.bat), then reload the page (F5).</p>
+        <noscript><p class="msg tone-bad">This page needs JavaScript switched on in the browser.</p></noscript>
+      </div>
+      <section id="panel-live" class="panel" aria-label="Dashboard" hidden></section>
+      <section id="panel-review" class="panel" aria-label="Review" hidden></section>
+      <section id="panel-races" class="panel" aria-label="Races" hidden></section>
+      <section id="panel-outputs" class="panel" aria-label="Outputs" hidden></section>
+      <section id="panel-inputs" class="panel" aria-label="Inputs" hidden></section>
+      <section id="panel-settings" class="panel" aria-label="Settings" hidden></section>
+      <section id="panel-help" class="panel" aria-label="Help" hidden></section>
+    </main>
+  </div>
+
+  <!-- A side drawer over the page (the output editor), built by app.js -->
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="false" aria-labelledby="drawer-title" hidden></aside>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <dialog id="dlg-confirm" class="dialog"></dialog>
+  <dialog id="dlg-browse" class="dialog"></dialog>
+  <dialog id="dlg-preview" class="dialog"></dialog>
+</body>
+</html>

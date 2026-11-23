@@ -1,0 +1,37 @@
+; Test fixture modelled on the user's TrackScore track script (v5): LayoutDraw lines, a ;;TimeArmed section, and
+; \13 header variables used INSIDE the ;;Results body. Comment header left out.
+;;TimeRunning
+\11\00Command=LayoutDraw;Name=Running Time;\0a
+\11\01{"c":"time","t":"%s"}\0d\0a
+
+;;TimeArmed
+\11\00Command=LayoutDraw;Name=Start List;\0a
+\11\00{"c":"armed"}\0d\0a
+
+;;ResultsHeader
+\13\00Command=LayoutDraw;Name=Results;\0a
+
+;;Results
+\14\00{"T":"T","D":{
+\13\04"EN":%s,
+\13\05"R":%s,
+\13\06"H":%s,
+\13\01"S":"%s",
+\13\0a"DS":"%s",
+\13\02"DN":"%s",
+\13\03"W":"%s",
+\14\01"P":"%s",
+\14\02"L":"%s",
+\14\03"BIB":"%s",
+\14\04"N":"%s",
+\14\05"AF":"%s",
+\14\06"T":"%s",
+\14\0c"RT":"%s",
+\14\0a"L2G":"%s",
+\14\08"CS":"%s",
+\14\09"LS":"%s",
+\14\17"FN":"%s",
+\14\18"LN":"%s"
+\14\00}}\0d\0a
+
+;;ResultsTrailer

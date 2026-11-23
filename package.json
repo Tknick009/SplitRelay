@@ -1,0 +1,14 @@
+{
+  "name": "split-relay",
+  "version": "9.28.0",
+  "private": true,
+  "description": "Takes Race Result 12 split passings and sends them out in FinishLynx .lss scoreboard format, so FinishLynx only draws finish lines.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test"
+  }
+}

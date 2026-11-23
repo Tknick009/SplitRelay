@@ -1,0 +1,113 @@
+{
+  "races": [
+    {
+      "id": "xcr-1790270042093-fz6x2i",
+      "name": "Men's Race",
+      "scheduledStart": "9:30",
+      "finishDistance": "8K",
+      "splitPoints": [
+        {
+          "distance": "800M",
+          "label": "800M"
+        },
+        {
+          "distance": "1500M",
+          "label": "1500M"
+        },
+        {
+          "distance": "2500M",
+          "label": "2500M"
+        },
+        {
+          "distance": "3500M",
+          "label": "3500M"
+        },
+        {
+          "distance": "4500M",
+          "label": "4500M"
+        },
+        {
+          "distance": "5500M",
+          "label": "5500M"
+        },
+        {
+          "distance": "6400M",
+          "label": "6400M"
+        },
+        {
+          "distance": "7100M",
+          "label": "7100M"
+        }
+      ],
+      "rules": "NCAA",
+      "genderFilter": "M",
+      "filterEventNumber": "1",
+      "showLogos": true,
+      "entriesOnly": false,
+      "watchFile": "",
+      "rtrtCategory": "",
+      "rtrtFinishPoint": "",
+      "estWinTime": "",
+      "status": "upcoming",
+      "updatedAt": "2026-09-24T20:28:04.046Z"
+    },
+    {
+      "id": "xcr-1790270149269-55gs2l",
+      "name": "Women's Race",
+      "scheduledStart": "10:15",
+      "finishDistance": "6K",
+      "splitPoints": [
+        {
+          "distance": "800M",
+          "label": "800M"
+        },
+        {
+          "distance": "1500M",
+          "label": "1500M"
+        },
+        {
+          "distance": "2400M",
+          "label": "2400M"
+        },
+        {
+          "distance": "3100M",
+          "label": "3100M"
+        },
+        {
+          "distance": "4200M",
+          "label": "4200M"
+        },
+        {
+          "distance": "4500M",
+          "label": "4500M"
+        },
+        {
+          "distance": "5400M",
+          "label": "5400M"
+        }
+      ],
+      "rules": "NCAA",
+      "genderFilter": "F",
+      "filterEventNumber": "2",
+      "showLogos": true,
+      "entriesOnly": false,
+      "watchFile": "",
+      "rtrtCategory": "",
+      "rtrtFinishPoint": "",
+      "estWinTime": "",
+      "status": "upcoming",
+      "updatedAt": "2026-09-24T20:29:14.566Z"
+    }
+  ],
+  "activeRaceId": "xcr-1790270149269-55gs2l",
+  "lynxDir": "",
+  "autoSwitch": true,
+  "rankingLabel": "",
+  "lynxEvent": {
+    "lastEventNumber": "2",
+    "lastEventAt": "2026-10-21T14:28:19.509Z",
+    "lastAutoSwitch": null,
+    "lastSkipReason": null,
+    "lastScopeMeetId": "meet-fixture-1"
+  }
+}

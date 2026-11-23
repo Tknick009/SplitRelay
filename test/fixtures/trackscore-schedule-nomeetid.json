@@ -1,0 +1,87 @@
+{
+  "races": [
+    {
+      "id": "xcr-1788464869215-kgpkcv",
+      "name": "Men's Race",
+      "scheduledStart": "11:45",
+      "finishDistance": "6K",
+      "splitPoints": [
+        {
+          "distance": "1000M",
+          "label": "1K"
+        },
+        {
+          "distance": "2355M",
+          "label": "2355M"
+        },
+        {
+          "distance": "5060M",
+          "label": "5060M"
+        }
+      ],
+      "rules": "NCAA",
+      "genderFilter": "M",
+      "filterEventNumber": "1",
+      "showLogos": true,
+      "entriesOnly": false,
+      "watchFile": "",
+      "rtrtCategory": "",
+      "rtrtFinishPoint": "",
+      "estWinTime": "",
+      "status": "upcoming",
+      "updatedAt": "2026-09-03T20:10:35.662Z"
+    },
+    {
+      "id": "xcr-1788466238462-mnjecx",
+      "name": "Women's Race",
+      "scheduledStart": "11:00",
+      "finishDistance": "5K",
+      "splitPoints": [
+        {
+          "distance": "1K",
+          "label": "1K"
+        },
+        {
+          "distance": "4060M",
+          "label": "4060M"
+        }
+      ],
+      "rules": "NCAA",
+      "genderFilter": "F",
+      "filterEventNumber": "2",
+      "showLogos": true,
+      "entriesOnly": false,
+      "watchFile": "",
+      "rtrtCategory": "",
+      "rtrtFinishPoint": "",
+      "estWinTime": "",
+      "status": "upcoming",
+      "updatedAt": "2026-09-03T20:11:32.022Z"
+    },
+    {
+      "id": "xcr-1788466294758-drfw9i",
+      "name": "Open Race",
+      "scheduledStart": "10:00",
+      "finishDistance": "3K",
+      "splitPoints": [],
+      "rules": "NCAA",
+      "genderFilter": "ALL",
+      "filterEventNumber": "3",
+      "showLogos": true,
+      "entriesOnly": false,
+      "watchFile": "",
+      "rtrtCategory": "",
+      "rtrtFinishPoint": "",
+      "estWinTime": "",
+      "status": "upcoming",
+      "updatedAt": "2026-09-03T20:12:00.354Z"
+    }
+  ],
+  "lynxEvent": {
+    "lastEventNumber": "2",
+    "lastEventAt": "2026-10-21T14:28:19.509Z",
+    "lastAutoSwitch": null,
+    "lastSkipReason": null,
+    "lastScopeMeetId": "meet-fixture-1"
+  }
+}

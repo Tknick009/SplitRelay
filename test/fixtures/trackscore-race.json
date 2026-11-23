@@ -1,0 +1,44 @@
+{
+  "meetId": "meet-fixture-1",
+  "config": {
+    "rules": "NCAA",
+    "genderFilter": "F",
+    "totalSplits": 7,
+    "finishDistance": "6K",
+    "filterEventNumber": "2",
+    "raceName": "Women's Race",
+    "entriesOnly": false,
+    "splitPoints": [
+      {
+        "distance": "800M",
+        "label": "800M"
+      },
+      {
+        "distance": "1500M",
+        "label": "1500M"
+      },
+      {
+        "distance": "2400M",
+        "label": "2400M"
+      },
+      {
+        "distance": "3100M",
+        "label": "3100M"
+      },
+      {
+        "distance": "4200M",
+        "label": "4200M"
+      },
+      {
+        "distance": "4500M",
+        "label": "4500M"
+      },
+      {
+        "distance": "5400M",
+        "label": "5400M"
+      }
+    ],
+    "showLogos": true,
+    "scheduledRaceId": "xcr-1790270149269-55gs2l"
+  }
+}
